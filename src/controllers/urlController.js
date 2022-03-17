@@ -13,11 +13,15 @@ export async function shortenUrl(req,res){
         INSERT INTO 
         urls(url) 
         VALUES ($1)
-        `,[url]);
+        `,[newUrl]);
         console.log("shorURL"+newUrl);
         res.status(201).send(`shortUrl:${newUrl}`);
     } catch (error) {
         console.log(error);
         res.sendStatus(500);
     }
+}
+
+export async function getUrl(req,res){
+
 }
