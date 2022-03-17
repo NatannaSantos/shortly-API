@@ -10,3 +10,8 @@ CREATE TABLE sessions (
    token TEXT NOT NULL UNIQUE,
    "userId" INTEGER NOT NULL REFERENCES users(id)
 );
+
+CREATE TABLE urls(
+	id SERIAL NOT NULL PRIMARY KEY,
+	url TEXT NOT NULL
+);
